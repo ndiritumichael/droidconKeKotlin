@@ -37,10 +37,7 @@ import org.robolectric.annotation.Config
 @Config(sdk = [33])
 class SessionsManagerTest {
     private val mockLocalSessionsDataSource = mockk<LocalSessionsDataSource>()
-    private val mockRemoteSessionsDataSource = mockk<RemoteSessionsDataSource>()
-    private lateinit var bookmarkDao: BookmarkDao
-    private lateinit var database: Database
-    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+
 
     @Test
     fun `test it fetches from the local cache`() =

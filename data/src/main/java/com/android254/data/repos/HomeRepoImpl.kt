@@ -35,7 +35,7 @@ class HomeRepoImpl
         private val sessionsRepo: SessionsRepo,
         private val sponsorsRepo: SponsorsRepo,
         private val organizersRepo: OrganizersRepo,
-        @IoDispatcher private val ioDispatcher: CoroutineDispatcher,
+
     ) : HomeRepo {
         override fun fetchHomeDetails(): Flow<HomeDetails> {
             val sponsorsflow = sponsorsRepo.getAllSponsors()
